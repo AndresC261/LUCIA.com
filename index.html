@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Para Mi Amor ❤️</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            color: #fff;
+            overflow-x: hidden;
+
+            background-color: #ff9a9e;
+            background-image: url("https://www.transparenttextures.com/patterns/flowers.png");
+        }
+
+        header {
+            padding: 50px 20px;
+        }
+
+        h1 {
+            font-size: 3.5em;
+        }
+
+        .mensaje {
+            margin: 20px auto;
+            width: 80%;
+            font-size: 1.5em;
+            line-height: 1.6;
+        }
+
+        .galeria {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px;
+        }
+
+        .galeria img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.1);
+        }
+
+        .boton {
+            background: #ff4b5c;
+            border: none;
+            padding: 15px 25px;
+            color: white;
+            font-size: 1.2em;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        
+        .heart {
+            position: fixed;
+            bottom: -10px;
+            color: #ff2e63;
+            font-size: 20px;
+            animation: subir 6s linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes subir {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-110vh);
+                opacity: 0;
+            }
+        }
+
+        
+        .flower {
+            position: fixed;
+            bottom: -10px;
+            font-size: 18px;
+            animation: subir 8s linear infinite;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Feliz Mes, Mi Amor ❤️</h1>
+    <p>Gracias por estos momentos tan hermosos contigo</p>
+</header>
+
+<div class="mensaje">
+    <p>
+        Quiero decirte cuanto te amo. Eres una de las razones de mi felicidad.
+        Gracias por tu amor, tu paciencia y por hacer mis días felices.
+        Te amo muchísimo 💕
+    </p>
+</div>
+
+<div class="galeria">
+    <img src="fotonosotros.jpeg"> <p>Nosotros ❤️</p>
+    <img src="fotofamilia.jpeg"> <p>Familia ❤️</p>
+    <img src="fototu.jpeg">      <p>Sonrisa ❤️</p>
+</div>
+
+<button class="boton" onclick="mostrarMensaje()">Haz clic aquí ❤️</button>
+
+<footer>
+    <p>Con amor, para ti 💖</p>
+</footer>
+
+<script>
+    function mostrarMensaje() {
+        alert("Eres mi persona favorita en todo el mundo 💕");
+    }
+
+    // 
+    function crearEfectos() {
+
+        const emojis = ["❤️", "💖", "💕", "🌸", "🌺"];
+
+        for (let i = 0; i < 20; i++) {
+            let el = document.createElement("div");
+            el.className = Math.random() > 0.5 ? "heart" : "flower";
+            el.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+            el.style.left = Math.random() * 100 + "vw";
+            el.style.fontSize = Math.random() * 20 + 10 + "px";
+            el.style.animationDuration = (Math.random() * 5 + 5) + "s";
+            document.body.appendChild(el);
+        }
+    }
+
+    crearEfectos();
+</script>
+
+</body>
+</html>
